@@ -56,83 +56,32 @@ public class TestCitizen
     //Close reader
     reader.close();
 
-    System.out.print("\n\n\n");
+        //Find citizenList size
+        while(!citizenList.isEmpty()) {
 
-    System.out.print("\t\t\t\t\t\t\tReceipients age 18 until age 30 :\n");
-
-    //Display format table
-    System.out.print("\t\t\t\t\t\t\t____________________________________________________________________________________________________________________________________\n");
-    System.out.format("\t\t\t\t\t\t\t| %17s | %14s | %16s | %6s | %9s | %15s | %15s | %15s |\n" , "NAME     ", "IC      ", "STATE     ", "AGE ", "CATEGORY", "FIRST DOSE  ", "SECOND DOSE  ", "CERTIFICATE  ");
-    System.out.print("\t\t\t\t\t\t\t|-------------------|----------------|------------------|--------|-----------|-----------------|-----------------|-----------------|\n");
-    
-    //Find citizenList size
-    for( int i = 0; i < citizenList.size(); i++ ) {
-
-        //Retrieve object from citizenList
-        cVac = citizenList.get(i);
+            cVac = citizenList.remove();
 
         if(cVac.getAge() >= 18 && cVac.getAge() <= 30) {
 
             //Store object into stack
             stCenter1.push(cVac);
 
-            //Display reciepients data according age
-            System.out.print(stCenter1.peek().toString());
-            System.out.print("\t\t\t\t\t\t\t|-------------------|----------------|------------------|--------|-----------|-----------------|-----------------|-----------------|\n");
         }
-    }
-    System.out.print("\n");
-
-
-    System.out.print("\t\t\t\t\t\t\tReceipients age 31 until age 49 :\n");
-
-    //Display format table
-    System.out.print("\t\t\t\t\t\t\t____________________________________________________________________________________________________________________________________\n");
-    System.out.format("\t\t\t\t\t\t\t| %17s | %14s | %16s | %6s | %9s | %15s | %15s | %15s |\n" , "NAME     ", "IC      ", "STATE     ", "AGE ", "CATEGORY", "FIRST DOSE  ", "SECOND DOSE  ", "CERTIFICATE  ");
-    System.out.print("\t\t\t\t\t\t\t|-------------------|----------------|------------------|--------|-----------|-----------------|-----------------|-----------------|\n");
-
-    //Find citizenList size
-    for( int i = 0; i < citizenList.size(); i++ ) {
-        
-        //Retrieve object from citizenList
-        cVac = citizenList.get(i);
 
         if(cVac.getAge() >= 31 && cVac.getAge() <= 49) {
 
             //Store object into stack
             stCenter2.push(cVac);
 
-            //Display reciepients data according age
-            System.out.print(stCenter2.peek().toString());
-            System.out.print("\t\t\t\t\t\t\t|-------------------|----------------|------------------|--------|-----------|-----------------|-----------------|-----------------|\n");
         }
-    }
-    System.out.print("\n");
 
-
-    System.out.print("\t\t\t\t\t\t\tReceipients age 50 and more :\n");
-
-    //Display format table
-    System.out.print("\t\t\t\t\t\t\t____________________________________________________________________________________________________________________________________\n");
-    System.out.format("\t\t\t\t\t\t\t| %17s | %14s | %16s | %6s | %9s | %15s | %15s | %15s |\n" , "NAME     ", "IC      ", "STATE     ", "AGE ", "CATEGORY", "FIRST DOSE  ", "SECOND DOSE  ", "CERTIFICATE  ");
-    System.out.print("\t\t\t\t\t\t\t|-------------------|----------------|------------------|--------|-----------|-----------------|-----------------|-----------------|\n");
-
-    //Find citizenList size
-    for( int i = 0; i < citizenList.size(); i++ ) {
-        
-        //Retrieve object from citizenList
-        cVac = citizenList.get(i);
         if(cVac.getAge() >= 50) {
 
             //Store object into stack
             stCenter3.push(cVac);
 
-            //Display reciepients data according age
-            System.out.print(stCenter3.peek().toString());
-            System.out.print("\t\t\t\t\t\t\t|-------------------|----------------|------------------|--------|-----------|-----------------|-----------------|-----------------|\n");
         }
     }
-    System.out.print("\n");
 
     //Declare menu 
    int menu = 0;
